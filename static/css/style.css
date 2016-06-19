@@ -1,0 +1,19 @@
+*{
+    margin:0 auto;
+}
+.login_box{
+    background: white;
+    padding-bottom: 2.5em;
+    margin-top: 6em;
+}
+.input_item{
+    margin-top: 2em;
+}
+
+.icon-dq{
+    font-style: normal;
+    width: 1.25em;
+    text-align: center;
+    display: inline-block;
+}
+
