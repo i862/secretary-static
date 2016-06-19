@@ -13,4 +13,6 @@ Vue.use(Validator)
 secretaryValid.init(Vue)
 var router = new Router()
 
+var router = new Router()
+
 router.start(App, '#app')
