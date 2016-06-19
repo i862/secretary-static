@@ -1,20 +1,83 @@
 *{
     margin:0 auto;
 }
+.login_body{
+    background: linear-gradient(180deg, #f46d4c,#EA5C56) no-repeat;
+    background-size: cover;
+}
+
 .login_box{
-    background: white;
-    padding-bottom: 2.5em;
-    margin-top: 6em;
+    padding-bottom: 5em;
+    margin-top: 12em;
 }
 .input_item{
     margin-top: 2em;
 }
-.icon-dq {
+
+.icon-dq{
     font-style: normal;
     width: 1.25em;
     text-align: center;
     display: inline-block;
+}
+.navbar-inverse{
+    background: none;
+    border:none;
+    padding-top: 2em;
+}
+.navbar-brand{
+    color:#f7f7f7;
+    font-size: 2.5em;
+}
+.nav_a{
+    color:#f7f7f7 !important ;
+    font-size: 1.25em !important ;
+}
+.nav_a:hover{
+    background: none !important;
+    text-decoration:none !important ;
+    color:#751B2D !important ;
+}
 
+.input_item input{
+    border-color: #fff;
+    height:52px;
+    padding:0 20px;
+    font-size: 1.25em;
+}
+
+.input_item input:focus{
+    border-color: #E6535C;
+
+}
+.login_button{
+    background: #407FF5;
+    font-size: 1.25em !important ;
+    color: #fff;
+    border-color: #2C72F5 !important ;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,.2)
+
+}
+.login_button:hover{
+    color: #fff;
+    background: #2C72F5;
+}
+
+.icon_white{
+    color: #f7f7f7;
+    font-size: 7em;
+}
+.icon_row{
+    text-align:center;
+    padding-bottom:5em;
+}
+
+.navbar_white{
+    color:#ffffff;
+}
+
+.navbar_red{
+    color:#F75F43 !important;
 }
 .form-success {
     position: absolute;
