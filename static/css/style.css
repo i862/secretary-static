@@ -29,6 +29,8 @@
     color:#f7f7f7;
     font-size: 2.5em;
 }
+
+/*导航栏右侧a标签*/
 .nav_a{
     color:#f7f7f7 !important ;
     font-size: 1.25em !important ;
@@ -38,17 +40,19 @@
     text-decoration:none !important ;
     color:#751B2D !important ;
 }
+.nav_a:visited{
+    background: none !important;
+}
 
+/*login页面输入框*/
 .input_item input{
     border-color: #fff;
     height:52px;
     padding:0 20px;
     font-size: 1.25em;
 }
-
 .input_item input:focus{
     border-color: #E6535C;
-
 }
 .login_button{
     background: #407FF5;
@@ -56,13 +60,13 @@
     color: #fff;
     border-color: #2C72F5 !important ;
     box-shadow:0 2px 5px 0 rgba(0,0,0,.2)
-
 }
 .login_button:hover{
     color: #fff;
     background: #2C72F5;
 }
 
+/*白色大图标*/
 .icon_white{
     color: #f7f7f7;
     font-size: 7em;
@@ -74,6 +78,36 @@
 
 .navbar_white{
     color:#ffffff;
+}
+
+.login_tip_success{
+    display: inline-block;
+    height:26px;
+    width:26px;
+    border-radius: 100%;
+    border:2px solid #fff;
+    background-color: #39D37F;
+    margin-top: 12px;
+    font-size: 1.25em;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 2px 0 2px rgba(0,0,0,.2);
+}
+.login_tip_error{
+    display: inline-block;
+    height:26px;
+    width:26px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    background-color: #292929;
+    margin-top: 12px;
+    font-size: 1.25em;
+    text-align: center;
+    color: #F7DE2F;
+    box-shadow: 0 2px 0 2px rgba(0,0,0,.2);
+}
+.login_tip_error > i{
+    font-size: 1.58em;
 }
 
 .navbar_red{
