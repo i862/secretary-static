@@ -7,8 +7,7 @@
 }
 
 .login_box{
-    padding-bottom: 5em;
-    margin-top: 12em;
+    margin-top: 5%;
 }
 .input_item{
     margin-top: 2em;
@@ -26,25 +25,26 @@
     padding-top: 2em;
 }
 .navbar-brand{
-    color:#f7f7f7;
+    color:#fff !important;
     font-size: 2.5em;
 }
 
-/*µ¼º½À¸ÓÒ²àa±êÇ©*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½aï¿½ï¿½Ç©*/
 .nav_a{
     color:#f7f7f7 !important ;
     font-size: 1.25em !important ;
+}
+.nav_a:link,.nav_a:visited{
+    background-color:transparent !important;
 }
 .nav_a:hover{
     background: none !important;
     text-decoration:none !important ;
     color:#751B2D !important ;
 }
-.nav_a:visited{
-    background: none !important;
-}
 
-/*loginÒ³ÃæÊäÈë¿ò*/
+
+/*loginÒ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 .input_item input{
     border-color: #fff;
     height:52px;
@@ -61,14 +61,17 @@
     border-color: #2C72F5 !important ;
     box-shadow:0 2px 5px 0 rgba(0,0,0,.2)
 }
+.login_button:link,.login_button:visited{
+    background-color:transparent;
+}
 .login_button:hover{
     color: #fff;
     background: #2C72F5;
 }
 
-/*°×É«´óÍ¼±ê*/
+/*ï¿½ï¿½É«ï¿½ï¿½Í¼ï¿½ï¿½*/
 .icon_white{
-    color: #f7f7f7;
+    color: #fff;
     font-size: 7em;
 }
 .icon_row{
