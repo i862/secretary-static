@@ -70,31 +70,31 @@
 	
 	var _httpUtil2 = _interopRequireDefault(_httpUtil);
 	
-	var _constants = __webpack_require__(18);
+	var _constants = __webpack_require__(23);
 	
 	var _constants2 = _interopRequireDefault(_constants);
 	
-	var _filters = __webpack_require__(36);
+	var _filters = __webpack_require__(24);
 	
 	var _filters2 = _interopRequireDefault(_filters);
 	
-	var _App = __webpack_require__(19);
+	var _App = __webpack_require__(25);
 	
 	var _App2 = _interopRequireDefault(_App);
 	
-	var _Main = __webpack_require__(24);
+	var _Main = __webpack_require__(27);
 	
 	var _Main2 = _interopRequireDefault(_Main);
 	
-	var _Login = __webpack_require__(27);
+	var _Login = __webpack_require__(30);
 	
 	var _Login2 = _interopRequireDefault(_Login);
 	
-	var _Dashbord = __webpack_require__(30);
+	var _Dashbord = __webpack_require__(33);
 	
 	var _Dashbord2 = _interopRequireDefault(_Dashbord);
 	
-	var _User = __webpack_require__(33);
+	var _User = __webpack_require__(36);
 	
 	var _User2 = _interopRequireDefault(_User);
 	
@@ -17064,7 +17064,7 @@
 	
 	var _promise2 = _interopRequireDefault(_promise);
 	
-	var _commonUtil = __webpack_require__(21);
+	var _commonUtil = __webpack_require__(18);
 	
 	var _commonUtil2 = _interopRequireDefault(_commonUtil);
 	
@@ -18036,62 +18036,11 @@
 
 /***/ },
 /* 18 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	/**
-	 * Created by menzhongxin on 16/6/19.
-	 */
-	var VERSION = '/1',
-	    HOST = 'localhost:3000';
-	var constants = {
-	  AUTH: VERSION + '/auth'
-	};
-	
-	var install = function install(vue) {
-	  console.log('constants');
-	  if (install.installed) return;
-	  vue.constants = constants;
-	  install.installed = true;
-	  console.log('constants');
-	};
-	exports.default = install;
-
-/***/ },
-/* 19 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__vue_template__ = __webpack_require__(23)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "./App.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 20 */,
-/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _stringify = __webpack_require__(37);
+	var _stringify = __webpack_require__(19);
 	
 	var _stringify2 = _interopRequireDefault(_stringify);
 	
@@ -18131,6 +18080,29 @@
 	  var user = window.localStorage.getItem('user');
 	  return user ? JSON.parse(user)._id : '';
 	};
+
+/***/ },
+/* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(20), __esModule: true };
+
+/***/ },
+/* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var core  = __webpack_require__(21)
+	  , $JSON = core.JSON || (core.JSON = {stringify: JSON.stringify});
+	module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
+	  return $JSON.stringify.apply($JSON, arguments);
+	};
+
+/***/ },
+/* 21 */
+/***/ function(module, exports) {
+
+	var core = module.exports = {version: '2.4.0'};
+	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 
 /***/ },
 /* 22 */
@@ -18421,19 +18393,90 @@
 /* 23 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<router-view></router-view>\n";
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	/**
+	 * Created by menzhongxin on 16/6/19.
+	 */
+	var VERSION = '/1',
+	    HOST = 'localhost:3000';
+	var constants = {
+	  AUTH: VERSION + '/auth'
+	};
+	
+	var install = function install(vue) {
+	  console.log('constants');
+	  if (install.installed) return;
+	  vue.constants = constants;
+	  install.installed = true;
+	  console.log('constants');
+	};
+	exports.default = install;
 
 /***/ },
 /* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+	
+	var _commonUtil = __webpack_require__(18);
+	
+	var _commonUtil2 = _interopRequireDefault(_commonUtil);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.loginFilter = function () {
+	  var utils = _commonUtil2.default;
+	  return function (transition) {
+	    if (transition.to.path !== '/' && !utils.getUserId()) transition.redirect('/');else transition.next();
+	  };
+	}; /**
+	    * Created by menzhongxin on 16/6/20.
+	    */
+
+/***/ },
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(25)
+	__vue_template__ = __webpack_require__(26)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./App.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 26 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<router-view></router-view>\n";
+
+/***/ },
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(28)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/components/Main.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(26)
+	__vue_template__ = __webpack_require__(29)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -18452,7 +18495,7 @@
 	})()}
 
 /***/ },
-/* 25 */
+/* 28 */
 /***/ function(module, exports) {
 
 	// <template>
@@ -18504,22 +18547,22 @@
 	"use strict";
 
 /***/ },
-/* 26 */
+/* 29 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"row\">\n  <div class=\"col-sm-2\">\n    <nav class=\"menu\" data-toggle=\"menu\" style=\"width: 200px\">\n      <button class=\"btn btn-primary\"><i class=\"icon-edit\"></i> CREATE</button>\n      <button class=\"btn\"><i class=\"icon-cloud-upload\"></i> UPLOAD</button>\n      <ul class=\"nav nav-primary\">\n        <li><a href=\"javascript:;\"><i class=\"icon-th\"></i> Dashboard</a></li>\n        <li><a href=\"javascript:;\"><i class=\"icon-user\"></i> Me</a></li>\n        <li class=\"nav-parent\">\n          <a href=\"javascript:;\"><i class=\"icon-time\"></i> Time<i\n                  class=\"icon-chevron-right nav-parent-fold-icon\"></i><i\n                  class=\"icon-chevron-right nav-parent-fold-icon\"></i></a>\n          <ul class=\"nav\" style=\"display: none;\">\n            <li><a href=\"\" v-link=\"{path:'/secretary/dashboard'}\">dashbord</a></li>\n            <li><a href=\"javascript:;\" v-link=\"{path:'/secretary/users'}\">users</a></li>\n            <li><a href=\"javascript:;\">Yestorday</a></li>\n            <li><a href=\"javascript:;\">This Week</a></li>\n          </ul>\n        </li>\n        <li><a href=\"javascript:;\"><i class=\"icon-trash\"></i> Trash</a></li>\n        <li><a href=\"javascript:;\"><i class=\"icon-list-ul\"></i> All</a></li>\n        <li class=\"active nav-parent show\">\n          <a href=\"javascript:;\"><i class=\"icon-tasks\"></i> Status<i\n                  class=\"icon-chevron-right nav-parent-fold-icon icon-rotate-90\"></i><i\n                  class=\"icon-chevron-right nav-parent-fold-icon icon-rotate-90\"></i></a>\n          <ul class=\"nav\" style=\"display: block;\">\n            <li><a href=\"javascript:;\"><i class=\"icon-circle-blank\"></i> Ready</a></li>\n            <li class=\"active\"><a href=\"javascript:;\"><i class=\"icon-play-sign\"></i> Ongoing</a></li>\n            <li><a href=\"javascript:;\"><i class=\"icon-ok-sign\"></i> Completed</a></li>\n          </ul>\n        </li>\n      </ul>\n    </nav>\n  </div>\n  <div class=\"col-sm-10\">\n    <router-view></router-view>\n  </div>\n</div>\n";
 
 /***/ },
-/* 27 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(28)
+	__vue_script__ = __webpack_require__(31)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/components/Login.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(29)
+	__vue_template__ = __webpack_require__(32)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -18538,12 +18581,12 @@
 	})()}
 
 /***/ },
-/* 28 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _commonUtil = __webpack_require__(21);
+	var _commonUtil = __webpack_require__(18);
 	
 	var _commonUtil2 = _interopRequireDefault(_commonUtil);
 	
@@ -18646,22 +18689,22 @@
 	/* generated by vue-loader */
 
 /***/ },
-/* 29 */
+/* 32 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"container\">\n  <nav class=\"navbar navbar-inverse navbar-static-top\">\n    <div class=\"container\">\n      <div class=\"navbar-header\">\n        <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\n          <span class=\"sr-only\">Toggle navigation</span>\n        </button>\n        <a class=\"navbar-brand navbar_white\" href=\"#\" >Working-Days</a>\n      </div>\n\n      <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n        <ul class=\"nav navbar-nav navbar-right\">\n          <li><a href=\"#\" class=\"nav_a\">关于</a></li>\n          <li><a v-link=\"{path:'/secretary'}\" class=\"nav_a\">技术支持</a></li>\n        </ul>\n      </div>\n    </div>\n  </nav>\n\n  <div class=\"row\">\n    <div class=\"col-sm-3\"></div>\n    <div class=\"col-sm-6 login_box\">\n      <div class=\"row icon_row\">\n        <span class=\"icon icon-trophy icon_white\"></span>\n      </div>\n\n      <validator name=\"login\">\n        <div class=\"row input_item\">\n          <div class=\"col-sm-1\"></div>\n          <div class=\"col-sm-10\">\n            <input type=\"text\" class=\"form-control\" v-model=\"info.phoneNum\"\n                   v-validate:tel=\"['mobile']\" placeholder=\"手机号\">\n          </div>\n          <div>\n            <span v-if=\"$login.tel.dirty && $login.tel.mobile\">Your user name is too short.</span>\n          </div>\n          <div class=\"col-sm-1\"></div>\n        </div>\n        <div class=\"row input_item\">\n          <div class=\"col-sm-1\"></div>\n          <div class=\"col-sm-10\">\n            <input type=\"password\" class=\"form-control\" v-model=\"info.password\"\n                   v-validate:password=\"['password']\" placeholder=\"密&nbsp&nbsp&nbsp码\">\n          </div>\n          <div>\n            <span v-if=\"$login.password.dirty && $login.password.password\">Your user name is too short.</span>\n          </div>\n          <div class=\"col-sm-1\"></div>\n        </div>\n        <div class=\"row input_item\">\n        <div class=\"col-sm-1\"></div>\n        <div class=\"col-sm-10\">\n          <input class=\"btn btn-block login_button\" @click=\"submit\" :disabled=\"!$login.valid\" type=\"button\" value=\"登&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp录\">\n        </div>\n        <div class=\"col-sm-1\"></div>\n      </div>\n      </validator>\n\n    </div>\n    <div class=\"col-sm-3\"></div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 30 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(31)
+	__vue_script__ = __webpack_require__(34)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/components/Dashbord.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(32)
+	__vue_template__ = __webpack_require__(35)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -18680,7 +18723,7 @@
 	})()}
 
 /***/ },
-/* 31 */
+/* 34 */
 /***/ function(module, exports) {
 
 	// <template>
@@ -18735,22 +18778,22 @@
 	"use strict";
 
 /***/ },
-/* 32 */
+/* 35 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"example\">\n  <div class=\"alert with-icon\">\n    <i class=\"icon-inbox\"></i>\n    <div class=\"content\">\n      <h4>你好</h4>\n      <hr>\n      <p>有一些内容你可能需要知道。</p>\n    </div>\n  </div>\n  <div class=\"alert alert-success with-icon\">\n    <i class=\"icon-ok-sign\"></i>\n    <div class=\"content\">\n      <h4>太好了!</h4>\n      <hr>\n      <strong>一切已准备就绪。</strong>\n    </div>\n  </div>\n  <div class=\"alert alert-primary with-icon\">\n    <i class=\"icon-star\"></i>\n    <div class=\"content\">\n      <h4>Hello</h4>\n      <hr>\n      <p>World.</p>\n    </div>\n  </div>\n  <div class=\"alert alert-info with-icon\">\n    <i class=\"icon-info-sign\"></i>\n    <div class=\"content\"><strong>Hi!</strong> 这条消息可能需要你注意。</div>\n  </div>\n  <div class=\"alert alert-warning with-icon\">\n    <i class=\"icon-frown\"></i>\n    <div class=\"content\"><strong>注意!</strong> 看起来遇到一些问题。</div>\n  </div>\n  <div class=\"alert alert-danger with-icon\">\n    <i class=\"icon-remove-sign\"></i>\n    <div class=\"content\">\n      <h4>不好了!</h4>\n      <p>确实遇到了问题，请立即处理吧。</p>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 33 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(34)
+	__vue_script__ = __webpack_require__(37)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/components/User.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(35)
+	__vue_template__ = __webpack_require__(38)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -18769,7 +18812,7 @@
 	})()}
 
 /***/ },
-/* 34 */
+/* 37 */
 /***/ function(module, exports) {
 
 	// <template>
@@ -18788,55 +18831,10 @@
 	"use strict";
 
 /***/ },
-/* 35 */
+/* 38 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"btn-group\">\n  <button type=\"button\" class=\"btn\">左</button>\n  <button type=\"button\" class=\"btn\">中</button>\n  <button type=\"button\" class=\"btn\">右</button>\n</div>\n";
-
-/***/ },
-/* 36 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var _commonUtil = __webpack_require__(21);
-	
-	var _commonUtil2 = _interopRequireDefault(_commonUtil);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.loginFilter = function () {
-	  var utils = _commonUtil2.default;
-	  return function (transition) {
-	    if (transition.to.path === '/') transition.next();
-	    if (!utils.getUserId()) transition.redirect('/');else transition.next();
-	  };
-	}; /**
-	    * Created by menzhongxin on 16/6/20.
-	    */
-
-/***/ },
-/* 37 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(38), __esModule: true };
-
-/***/ },
-/* 38 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var core  = __webpack_require__(39)
-	  , $JSON = core.JSON || (core.JSON = {stringify: JSON.stringify});
-	module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
-	  return $JSON.stringify.apply($JSON, arguments);
-	};
-
-/***/ },
-/* 39 */
-/***/ function(module, exports) {
-
-	var core = module.exports = {version: '2.4.0'};
-	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 
 /***/ }
 /******/ ]);
