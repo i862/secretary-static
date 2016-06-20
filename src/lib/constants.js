@@ -4,8 +4,7 @@
 const VERSION = '/1'
   ,HOST = 'localhost:3000';
 let constants = {
-  'X-USER-ID':''
-  ,AUTH: VERSION + '/auth'
+  AUTH: VERSION + '/auth'
 };
 
 let install = function(vue){

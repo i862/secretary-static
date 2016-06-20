@@ -2,6 +2,7 @@
  * Created by menzhongxin on 16/6/19.
  */
 import promise from 'promise'
+import util from './commonUtil'
 let spellUrl = function({url,query={}}){
   if(url.lastIndexOf('?') < 0)
     url += '?1=1';
@@ -26,7 +27,7 @@ let install = function(Vue){
     return;
 
   let headers = {
-    'x-user-id':Vue.constants['X-USER-ID'],
+    'x-user-id':util.getUserId(),
     'Content-Type':'application/json'
   };
 
@@ -36,10 +37,10 @@ let install = function(Vue){
     headers.timestamp = Date.now();
     Vue.http.get(spellUrl(url,query),headers)
       .then(function(data){
-        return promise.resolve(data.data);
+        return promise.resolve(JSON.parse(data.data));
       }
       ,function(err){
-        return promise.reject(err.data);
+        return promise.reject(JSON.parse(err.data));
       });
   };
 
@@ -49,10 +50,10 @@ let install = function(Vue){
     headers.timestamp = Date.now();
     return Vue.http.post(url,data,headers)
       .then(function(data){
-        return promise.resolve(data.data);
+          return promise.resolve(JSON.parse(data.data));
       }
       ,function(err){
-        return promise.reject(err.data);
+          return promise.reject(JSON.parse(err.data));
       });
   };
 
