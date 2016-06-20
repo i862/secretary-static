@@ -2,12 +2,15 @@
   "name": "secretary",
   "version": "0.0.0",
   "private": true,
-  "scripts": {
-  },
+  "scripts": {},
   "dependencies": {
+    "body-parser": "^1.15.1",
+    "debug": "^2.2.0",
+    "morgan": "^1.7.0",
+    "promise": "^7.1.1",
     "require-dir": "^0.3.0",
     "serve-favicon": "~2.3.0",
-    "serve-static": "^1.10.2",
+    "serve-static": "^1.11.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.1.1",
     "underscore": "^1.8.3",
