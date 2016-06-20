@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello Zui!</title>
+  <!-- zui -->
+  <link href="../../static/css/zui.min.css" rel="stylesheet">
+  <link href="../../static/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <a class="navbar-brand navbar_red" href="#">Working-Days</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle nav_a navbar_red" data-toggle="dropdown">管理 <b class="caret navbar_red"></b></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">修改密码</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container main_body">
+    <!-- 左侧菜单-->
+    <div class="col-sm-2 col_left">
+      <nav class="menu" data-toggle="menu">
+        <ul class="nav nav-primary">
+          <li class="nav-parent show no_border">
+            <a href="#">项目管理</a>
+            <ul class="nav">
+              <li><a href="#">新建项目</a></li>
+              <li><a href="#">工作量统计</a></li>
+              <li><a href="#">组织过程资产</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-parent show">
+            <a href="#">系统管理</a>
+            <ul class="nav">
+              <li><a href="#">人员管理</a></li>
+              <li><a href="#">新建规则</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- 内容-->
+    <div class="col-sm-10 main_content">
+      <!-- 项目说明-->
+      <div class="row">
+        <div class="panel-group" >
+          <!--项目说明-->
+          <div class="panel">
+            <a class="collapsed panel-heading collapsed panelhead_a" data-toggle="collapse" data-parent="#accordion" href="#instr">项目说明</a>
+            <div id="instr" class="panel-collapse">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-sm-1">
+                    <label>所属地市</label>
+                  </div>
+                  <div class="col-sm-2">
+                    <select class="form-control">
+                      <option>济南</option>
+                      <option>青岛</option>
+                      <option>省集服</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-1">
+                    <label>工单编号</label>
+                  </div>
+                  <div class="col-sm-2">
+                    <input class="form-control">
+                  </div>
+                  <div class="col-sm-1">
+                    <label>项目名称</label>
+                  </div>
+                  <div class="col-sm-3">
+                    <input class="form-control">
+                  </div>
+
+                </div>
+
+                <div class="row row_item">
+                  <div class="col-sm-1">
+                    <label>项目类型</label>
+                  </div>
+                  <div class="col-sm-2">
+                    <select class="form-control">
+                      <option>ICT项目支撑</option>
+                      <option>投标竞标支撑</option>
+                    </select>
+                  </div>
+
+                  <div class="col-sm-1">
+                    <label>项目难度</label>
+                  </div>
+                  <div class="col-sm-2">
+                    <select class="form-control">
+                      <option>1级难度</option>
+                      <option>2级难度</option>
+                      <option>3级难度</option>
+                    </select>
+                  </div>
+
+                  <div class="col-sm-1">
+                    <label>项目简介</label>
+                  </div>
+                  <div class="col-sm-4">
+                    <textarea class="form-control" row="2"></textarea>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+<!--一般ICT支撑-->
+          <div class="panel" style="display: none;">
+            <a class="collapsed panel-heading collapsed panelhead_a" data-toggle="collapse" data-parent="#accordion" href="#proj">支撑工作量</a>
+            <div id="proj" class="panel-collapse">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-sm-2">
+                    <select class="form-control">
+                      <option>一般项目支撑</option>
+                      <option>展会支撑</option>
+                    </select>
+                  </div>
+                </div>
+<!--一般项目支撑-->
+                <div class="container" id="normal-proj">
+                  <div class="row row_item">
+                    <div class="col-sm-2">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox">无明确需求方案
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-1">
+                      <span class="daynum">3</span>
+                    </div>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" placeholder="说明">
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="form-group input_file">
+                        <input type="file" id="file1">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row row_item">
+                    <div class="col-sm-2">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox">初版方案
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-1">
+                      <span class="daynum">3</span>
+                    </div>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" placeholder="说明">
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="form-group input_file">
+                        <input type="file" id="file2">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row row_item">
+                    <div class="col-sm-2">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox">贴合需求方案
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-1">
+                      <span class="daynum">3</span>
+                    </div>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" placeholder="说明">
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="form-group input_file">
+                        <input type="file" id="file3">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row row_item">
+                    <div class="col-sm-2">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox">询价
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-1">
+                      <span class="daynum">3</span>
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control" placeholder="次数">
+                    </div>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" placeholder="说明">
+                    </div>
+                  </div>
+
+                  <div class="row row_item">
+                    <div class="col-sm-2">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox">现场调研需求
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-1">
+                      <span class="daynum">3</span>
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control" placeholder="次数">
+                    </div>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" placeholder="说明">
+                    </div>
+                  </div>
+
+                  <div class="row row_item">
+                    <div class="col-sm-2">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox">对外培训
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-1">
+                      <span class="daynum">3</span>
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control" placeholder="次数">
+                    </div>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" placeholder="说明">
+                    </div>
+                  </div>
+
+                  <div class="row row_item">
+                    <div class="col-sm-2">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox">对内培训
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-1">
+                      <span class="daynum">3</span>
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control" placeholder="次数">
+                    </div>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" placeholder="说明">
+                    </div>
+                  </div>
+                </div>
+<!--展会支撑-->
+                <div class="container" id="unnormal-proj">
+                  <div class="row row_item">
+                    <div class="col-sm-2">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox">素材收集
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-1">
+                      <span class="daynum">3</span>
+                    </div>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" placeholder="说明">
+                    </div>
+                  </div>
+                  <div class="row row_item">
+                    <div class="col-sm-2">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox">展板设计
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-1">
+                      <span class="daynum">3</span>
+                    </div>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" placeholder="说明">
+                    </div>
+                  </div>
+                  <div class="row row_item">
+                    <div class="col-sm-2">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox">多媒体展示
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-1">
+                      <span class="daynum">3</span>
+                    </div>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" placeholder="说明">
+                    </div>
+                  </div>
+                  <div class="row row_item">
+                    <div class="col-sm-2">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox">硬件互动
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-1">
+                      <span class="daynum">3</span>
+                    </div>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" placeholder="说明">
+                    </div>
+                  </div>
+                  <div class="row row_item">
+                    <div class="col-sm-2">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox">现场布展
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-1">
+                      <span class="daynum">3</span>
+                    </div>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" placeholder="说明">
+                    </div>
+                  </div>
+                  <div class="row row_item">
+                    <div class="col-sm-2">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox">讲解稿设计
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-1">
+                      <span class="daynum">3</span>
+                    </div>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" placeholder="说明">
+                    </div>
+                  </div>
+
+                  <div class="row row_item">
+                    <div class="col-sm-2">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox">讲解员培训
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-1">
+                      <span class="daynum">3</span>
+                    </div>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" placeholder="说明">
+                    </div>
+                  </div>
+                  <div class="row row_item">
+                    <div class="col-sm-2">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox">现场讲解
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-1">
+                      <span class="daynum">3</span>
+                    </div>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" placeholder="说明">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!--投标竞标-->
+          <div class="panel">
+            <a class="collapsed panel-heading collapsed panelhead_a" data-toggle="collapse" data-parent="#accordion" href="#bid">
+              投标竞标工作量</a>
+            <div id="bid" class="panel-collapse">
+              <div class="panel-body">
+                <div class="row">
+                  <label class="radio-inline">
+                    <input type="radio">""
+                  </label>
+
+                </div>
+              </div>
+            </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script src="../../static/lib/jquery.1.11.0.min.js"></script>
+<!--zui js-->
+<script src="../../static/lib/zui.min.js"></script>
+
+</body>
+</html>

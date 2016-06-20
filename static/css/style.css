@@ -29,7 +29,7 @@
     font-size: 2.5em;
 }
 
-/*�������Ҳ�a��ǩ*/
+
 .nav_a{
     color:#f7f7f7 !important ;
     font-size: 1.25em !important ;
@@ -44,7 +44,7 @@
 }
 
 
-/*loginҳ�������*/
+
 .input_item input{
     border-color: #fff;
     height:52px;
@@ -61,15 +61,23 @@
     border-color: #2C72F5 !important ;
     box-shadow:0 2px 5px 0 rgba(0,0,0,.2)
 }
-.login_button:link,.login_button:visited{
-    background-color:transparent;
+.login_button:visited{
+    background-color: black;
 }
+
 .login_button:hover{
     color: #fff;
     background: #2C72F5;
 }
 
-/*��ɫ��ͼ��*/
+.login_button:disabled{
+    color:#fff;
+    background: #407FF5;
+    border-color: #2C72F5;
+    opacity: 1;
+}
+
+
 .icon_white{
     color: #fff;
     font-size: 7em;
@@ -113,6 +121,8 @@
     font-size: 1.58em;
 }
 
+
+
 .navbar_red{
     color:#F75F43 !important;
 }
@@ -144,5 +154,45 @@
 }
 .form-input {
     background: none;
+}
+
+/*main page*/
+.main_body{
+    padding-top: 2em;
+}
+.main_content{
+    padding-left: 2em;
+}
+.col_left{
+    padding-left: 0 !important;
+}
+
+.nav>li>a{
+    border:none;
+    color:#F75F43;
+}
+
+
+.panelhead_a{
+    display: block;
+    text-decoration: none;
+}
+.panelhead_a:link,.panelhead_a:visited{
+    text-decoration: none;
+}
+.panelhead_a:hover{
+    text-decoration: none;
+}
+
+
+.row_item{
+    margin-top: 1em;
+}
+
+.daynum{
+    line-height:40px;
+}
+.input_file{
+    line-height:38px;
 }
 
