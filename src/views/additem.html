@@ -100,9 +100,9 @@
                     <label>项目类型</label>
                   </div>
                   <div class="col-sm-2">
-                    <select class="form-control">
-                      <option>ICT项目支撑</option>
-                      <option>投标竞标支撑</option>
+                    <select class="form-control" id="slc_type">
+                      <option value="ict" selected>ICT项目支撑</option>
+                      <option value="bid">投标竞标支撑</option>
                     </select>
                   </div>
 
@@ -110,10 +110,10 @@
                     <label>项目难度</label>
                   </div>
                   <div class="col-sm-2">
-                    <select class="form-control">
-                      <option>1级难度</option>
-                      <option>2级难度</option>
-                      <option>3级难度</option>
+                    <select class="form-control" id="slc_mode">
+                      <option value="grade1" selected>1级难度</option>
+                      <option value="grade2">2级难度</option>
+                      <option value="grade3">3级难度</option>
                     </select>
                   </div>
 
@@ -125,21 +125,33 @@
                   </div>
                 </div>
 
+                <div class="row row_item" id="slc_tiprow">
+                  <div class="col-sm-1">
+                    <label>说明</label>
+                  </div>
+                  <div class="col-sm-11">
+                    <p id="slc_tip1">
+                    </p>
+                    <p id="slc_tip2">
+                    </p>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
 
 
 <!--一般ICT支撑-->
-          <div class="panel">
-            <a class="collapsed panel-heading collapsed panelhead_a" data-toggle="collapse" data-parent="#accordion" href="#proj">支撑工作量
+          <div class="panel panel_gap" id="work_ict">
+            <a class="collapsed panel-heading collapsed panelhead_a" data-toggle="collapse" data-parent="#accordion" href="#proj">ICT项目支撑
               <span class="wds_right">工作量: <span>15</span></span>
             </a>
             <div id="proj" class="panel-collapse">
               <div class="panel-body">
                 <div class="row">
                   <div class="col-sm-2">
-                    <select class="form-control" id="select_proj">
+                    <select class="form-control" id="slc_proj">
                       <option value="normal">一般项目支撑</option>
                       <option value="unnormal">展会支撑</option>
                     </select>
@@ -287,7 +299,7 @@
                   </div>
                 </div>
 <!--展会支撑-->
-                <div class="container" id="unnormal-proj">
+                <div class="container" id="unnormal-proj" style="display: none;">
                   <div class="row row_item">
                     <div class="col-sm-2">
                       <div class="checkbox">
@@ -416,9 +428,9 @@
           </div>
 
           <!--投标竞标-->
-          <div class="panel">
+          <div class="panel panel_gap" id="work_bid" style="display: none;">
             <a class="collapsed panel-heading collapsed panelhead_a" data-toggle="collapse" data-parent="#accordion" href="#bid">
-              投标竞标工作量
+              投标竞标支撑
               <span class="wds_right">工作量: <span>15</span></span></a>
             <div id="bid" class="panel-collapse">
               <div class="panel-body">
@@ -487,31 +499,124 @@
                     </span>
                   </div>
                   <div class="col-sm-1">
-                    <label class="radio-inline">
-                      <input type="radio" name="money"><50万
+                    <label class="radio-inline label_check">
+                      <input type="radio" name="money" class="input_check"><50万
                     </label>
                   </div>
                   <div class="col-sm-2">
-                    <label class="radio-inline">
-                      <input type="radio" name="money">50(含)-100万
+                    <label class="radio-inline label_check">
+                      <input type="radio" name="money" class="input_check">50(含)-100万
                     </label>
                   </div>
                   <div class="col-sm-2">
-                    <label class="radio-inline">
-                      <input type="radio" name="money">100(含)-500万
+                    <label class="radio-inline label_check">
+                      <input type="radio" name="money" class="input_check">100(含)-500万
                     </label>
                   </div>
                   <div class="col-sm-2">
-                    <label class="radio-inline">
-                      <input type="radio" name="money">500(含)-1000万
+                    <label class="radio-inline label_check">
+                      <input type="radio" name="money" class="input_check">500(含)-1000万
                     </label>
                   </div>
                   <div class="col-sm-2">
-                    <label class="radio-inline">
-                      <input type="radio" name="money">>1000万（含）
+                    <label class="radio-inline label_check">
+                      <input type="radio" name="money" class="input_check">>1000万（含）
                     </label>
                   </div>
 
+                </div>
+
+                <div class="row  row_item">
+                  <div class="col-sm-2">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox">现场讲标
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-1">
+                    <span class="daynum">
+                      3
+                    </span>
+                  </div>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control" placeholder="说明">
+                  </div>
+                </div>
+
+                <div class="row  row_item">
+                  <div class="col-sm-2">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox">采购方其他要求
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-1">
+                    <span class="daynum">
+                      3
+                    </span>
+                  </div>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control" placeholder="说明">
+                  </div>
+                </div>
+
+                <div class="row  row_item">
+                  <div class="col-sm-2">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox">借资质
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-1">
+                    <span class="daynum">
+                      3
+                    </span>
+                  </div>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control" placeholder="说明">
+                  </div>
+                </div>
+
+                <div class="row  row_item">
+                  <div class="col-sm-2">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox">中移陪标
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-1">
+                    <span class="daynum">
+                      3
+                    </span>
+                  </div>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control" placeholder="说明">
+                  </div>
+                </div>
+
+                <div class="row  row_item">
+                  <div class="col-sm-2">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox">寻找陪标单位
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-1">
+                    <span class="daynum">
+                      3
+                    </span>
+                  </div>
+                  <div class="col-sm-1">
+                    <input type="text" class="form-control" placeholder="数量">
+                  </div>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control" placeholder="说明">
+                  </div>
                 </div>
               </div>
             </div>
@@ -534,21 +639,44 @@
 <script>
   $(function(){
 
-    $("#select_proj").change(function(){
-      var select_val1=$("#select_proj").val();
+    $("#slc_proj").change(function(){
+      var select_val1=$("#slc_proj").val();
       if(select_val1=="unnormal"){
         console.log(select_val1);
         $('#normal-proj').hide();
         $('#unnormal-proj').show();
-    }
+      }
       if(select_val1=="normal"){
         console.log(select_val1);
         $('#normal-proj').show();
         $('#unnormal-proj').hide();
-
       }
     });
 
+    $("#slc_type").change(function(){
+      var select_val2=$("#slc_type").val();
+      if(select_val2=="ict"){
+        console.log(select_val2);
+        $('#work_bid').hide();
+        $('#work_ict').show();
+      }
+      if(select_val2=="bid"){
+        console.log(select_val2);
+        $('#work_bid').show();
+        $('#work_ict').hide();
+      }
+    });
+
+    $("#slc_mode").change(function() {
+      var select_val3 = $('#slc_mode').val();
+      if(select_val3=='grade1'){
+        $('#slc_tip1').html('1级难度项目：包含但不限于标准化程度较高、使用频次较高、简单、行业框架项目、成熟行业产品');
+        $('#slc_tip2').html('OA（整套OA建设）、网站建设、一卡通、外勤通、党建、农业信息化、巡检、执法、食药监信息化、4G和拍、车载监控、微信公众号、位置应用、云视讯、软件视频会议、老人关爱平台等');
+      }
+      if(select_val3=='grade2'){
+        $('#slc_tip1').html('2级难度项目：包含但不限于需要软硬集成、开发难度较高、需要现场调研、包含2-3个子系统的综合型项目&#10;硬件视频会议、视频监控、大数据、WLAN覆盖、呼叫中心、外呼平台、网格化、物联网、电子政务、MDM、原系统移动终端开发、旅游APP、人社系统、医保系统等');
+      }
+    });
 
   });
 </script>

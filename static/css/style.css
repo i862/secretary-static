@@ -176,6 +176,8 @@
 .panelhead_a{
     display: block;
     text-decoration: none;
+    font-weight:bold;
+    background-color: #FCF6F5 !important;
 }
 .panelhead_a:link,.panelhead_a:visited{
     text-decoration: none;
@@ -211,5 +213,31 @@
 .wds_right{
     text-align: right;
     float: right;
+    color: #E6573E;
+    font-weight: bold;
+}
+
+. panel_gap{
+
+}
+
+.nav-parent > .nav>li{
+    background-color:#fff !important;
+}
+
+.nav-parent > .nav>li>a{
+    border:none !important;
+}
+.nav-parent > .nav>li>a:link,.nav-parent > .nav>li>a:visited{
+    background-color:#fff !important;
+    color:#F76D54;
+}
+.nav-parent > .nav>li>a:hover{
+    color:#fff !important;
+    background-color: #F77B65 !important;
+}
+
+#slc_tip1{
+    margin-bottom: 0;
 }
 
