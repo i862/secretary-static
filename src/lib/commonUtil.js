@@ -26,3 +26,7 @@ exports.getUserId = function(){
   var user = window.localStorage.getItem('user');
   return user?JSON.parse(user)._id:'';
 };
+
+exports.getCurrentUser = function(){
+  return window.localStorage.getItem('user');
+};

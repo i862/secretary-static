@@ -40,5 +40,9 @@
 </template>
 
 <script>
-
+module.exports = {
+  ready:function(){
+    $('[data-toggle="menu"]').menu();
+  }
+}
 </script>

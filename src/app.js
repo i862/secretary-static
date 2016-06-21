@@ -41,5 +41,4 @@ router.map({
 });
 
 router.beforeEach(filters.loginFilter());
-
 router.start(App, '#app');
