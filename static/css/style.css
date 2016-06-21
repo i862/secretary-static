@@ -191,8 +191,25 @@
 
 .daynum{
     line-height:40px;
+    text-align:center;
 }
 .input_file{
     line-height:38px;
+}
+
+.input_check{
+    height:36px;
+    line-height: 36px;
+    vertical-align:middle;
+}
+.label_check{
+    height:42px;
+    line-height: 42px;
+    vertical-align:middle;
+}
+
+.wds_right{
+    text-align: right;
+    float: right;
 }
 

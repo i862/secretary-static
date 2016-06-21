@@ -25,7 +25,7 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle nav_a navbar_red" data-toggle="dropdown">管理 <b class="caret navbar_red"></b></a>
+            <a href="#" class="dropdown-toggle nav_a navbar_red" data-toggle="dropdown">你好，<span>Amen</span><b class="caret navbar_red"></b></a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="#">修改密码</a></li>
             </ul>
@@ -131,15 +131,17 @@
 
 
 <!--一般ICT支撑-->
-          <div class="panel" style="display: none;">
-            <a class="collapsed panel-heading collapsed panelhead_a" data-toggle="collapse" data-parent="#accordion" href="#proj">支撑工作量</a>
+          <div class="panel">
+            <a class="collapsed panel-heading collapsed panelhead_a" data-toggle="collapse" data-parent="#accordion" href="#proj">支撑工作量
+              <span class="wds_right">工作量: <span>15</span></span>
+            </a>
             <div id="proj" class="panel-collapse">
               <div class="panel-body">
                 <div class="row">
                   <div class="col-sm-2">
-                    <select class="form-control">
-                      <option>一般项目支撑</option>
-                      <option>展会支撑</option>
+                    <select class="form-control" id="select_proj">
+                      <option value="normal">一般项目支撑</option>
+                      <option value="unnormal">展会支撑</option>
                     </select>
                   </div>
                 </div>
@@ -160,8 +162,8 @@
                       <input type="text" class="form-control" placeholder="说明">
                     </div>
                     <div class="col-sm-3">
-                      <div class="form-group input_file">
-                        <input type="file" id="file1">
+                      <div class="form-group input_file label_check">
+                        <input type="file" id="file1" class="input_check">
                       </div>
                     </div>
                   </div>
@@ -416,13 +418,99 @@
           <!--投标竞标-->
           <div class="panel">
             <a class="collapsed panel-heading collapsed panelhead_a" data-toggle="collapse" data-parent="#accordion" href="#bid">
-              投标竞标工作量</a>
+              投标竞标工作量
+              <span class="wds_right">工作量: <span>15</span></span></a>
             <div id="bid" class="panel-collapse">
               <div class="panel-body">
                 <div class="row">
-                  <label class="radio-inline">
-                    <input type="radio">""
-                  </label>
+                  <div class="col-sm-2">
+                    <label class="daynum">
+                      投标期限
+                    </label>
+                  </div>
+                  <div class="col-sm-1">
+                    <span class="daynum">
+                      3
+                    </span>
+                  </div>
+                  <div class="col-sm-2">
+                    <label class="radio-inline label_check" >
+                      <input type="radio" name="due" class="input_check">3日以内
+                    </label>
+                  </div>
+                  <div class="col-sm-2">
+                    <label class="radio-inline label_check">
+                      <input type="radio" name="due"  class="input_check">3-7日
+                    </label>
+                  </div>
+                  <div class="col-sm-2">
+                    <label class="radio-inline label_check">
+                      <input type="radio" name="due" class="input_check">7-30日
+                    </label>
+                  </div>
+                  <div class="col-sm-2">
+                    <label class="radio-inline label_check">
+                      <input type="radio" name="due" class="input_check">30日以上
+                    </label>
+                  </div>
+
+                </div>
+
+                <div class="row  row_item">
+                  <div class="col-sm-2">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox">包含硬件
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-1">
+                    <span class="daynum">
+                      3
+                    </span>
+                  </div>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control" placeholder="说明">
+                  </div>
+                </div>
+
+
+                <div class="row row_item">
+                  <div class="col-sm-2">
+                    <label class="daynum">
+                      投标金额
+                    </label>
+                  </div>
+                  <div class="col-sm-1">
+                    <span class="daynum">
+                      3
+                    </span>
+                  </div>
+                  <div class="col-sm-1">
+                    <label class="radio-inline">
+                      <input type="radio" name="money"><50万
+                    </label>
+                  </div>
+                  <div class="col-sm-2">
+                    <label class="radio-inline">
+                      <input type="radio" name="money">50(含)-100万
+                    </label>
+                  </div>
+                  <div class="col-sm-2">
+                    <label class="radio-inline">
+                      <input type="radio" name="money">100(含)-500万
+                    </label>
+                  </div>
+                  <div class="col-sm-2">
+                    <label class="radio-inline">
+                      <input type="radio" name="money">500(含)-1000万
+                    </label>
+                  </div>
+                  <div class="col-sm-2">
+                    <label class="radio-inline">
+                      <input type="radio" name="money">>1000万（含）
+                    </label>
+                  </div>
 
                 </div>
               </div>
@@ -433,6 +521,7 @@
       </div>
     </div>
   </div>
+  </div>
 </div>
 
 
@@ -441,6 +530,28 @@
 <script src="../../static/lib/jquery.1.11.0.min.js"></script>
 <!--zui js-->
 <script src="../../static/lib/zui.min.js"></script>
+
+<script>
+  $(function(){
+
+    $("#select_proj").change(function(){
+      var select_val1=$("#select_proj").val();
+      if(select_val1=="unnormal"){
+        console.log(select_val1);
+        $('#normal-proj').hide();
+        $('#unnormal-proj').show();
+    }
+      if(select_val1=="normal"){
+        console.log(select_val1);
+        $('#normal-proj').show();
+        $('#unnormal-proj').hide();
+
+      }
+    });
+
+
+  });
+</script>
 
 </body>
 </html>
