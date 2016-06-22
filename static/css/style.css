@@ -61,8 +61,12 @@
     border-color: #2C72F5 !important ;
     box-shadow:0 2px 5px 0 rgba(0,0,0,.2)
 }
-.login_button:visited{
-    background-color: black;
+.login_button:focus{
+    background: #407FF5;
+    font-size: 1.25em !important ;
+    color: #fff;
+    border-color: #2C72F5 !important ;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,.2)
 }
 
 .login_button:hover{
@@ -109,13 +113,10 @@
     height:26px;
     width:26px;
     border-radius: 100%;
-    border: 2px solid #fff;
-    background-color: #292929;
     margin-top: 12px;
     font-size: 1.25em;
     text-align: center;
-    color: #F7DE2F;
-    box-shadow: 0 2px 0 2px rgba(0,0,0,.2);
+    color: #F7ED79;
 }
 .login_tip_error > i{
     font-size: 1.58em;
@@ -240,4 +241,21 @@
 #slc_tip1{
     margin-bottom: 0;
 }
+
+#slc_mode{
+
+}
+#slc_mode p{
+    display: none;
+    background-color: #0073b7;
+    position: absolute;
+    padding: 20px;
+    margin-top: 1em;
+    overflow: visible;
+    z-index: 100;
+}
+#slc_mode:hover p{
+     display:block;
+ }
+
 

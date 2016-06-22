@@ -109,13 +109,15 @@
                   <div class="col-sm-1">
                     <label>项目难度</label>
                   </div>
-                  <div class="col-sm-2">
-                    <select class="form-control" id="slc_mode">
+                  <div class="col-sm-2" id="slc_mode">
+                    <select class="form-control">
                       <option value="grade1" selected>1级难度</option>
                       <option value="grade2">2级难度</option>
                       <option value="grade3">3级难度</option>
                     </select>
+                    <p>ssssss</p>
                   </div>
+
 
                   <div class="col-sm-1">
                     <label>项目简介</label>
@@ -125,17 +127,17 @@
                   </div>
                 </div>
 
-                <div class="row row_item" id="slc_tiprow">
-                  <div class="col-sm-1">
-                    <label>说明</label>
-                  </div>
-                  <div class="col-sm-11">
-                    <p id="slc_tip1">
-                    </p>
-                    <p id="slc_tip2">
-                    </p>
-                  </div>
-                </div>
+                <!--<div class="row row_item" id="slc_tiprow">-->
+                  <!--<div class="col-sm-1">-->
+                    <!--<label>说明</label>-->
+                  <!--</div>-->
+                  <!--<div class="col-sm-11">-->
+                    <!--<p id="slc_tip1">-->
+                    <!--</p>-->
+                    <!--<p id="slc_tip2">-->
+                    <!--</p>-->
+                  <!--</div>-->
+                <!--</div>-->
 
               </div>
             </div>
@@ -667,16 +669,16 @@
       }
     });
 
-    $("#slc_mode").change(function() {
-      var select_val3 = $('#slc_mode').val();
-      if(select_val3=='grade1'){
-        $('#slc_tip1').html('1级难度项目：包含但不限于标准化程度较高、使用频次较高、简单、行业框架项目、成熟行业产品');
-        $('#slc_tip2').html('OA（整套OA建设）、网站建设、一卡通、外勤通、党建、农业信息化、巡检、执法、食药监信息化、4G和拍、车载监控、微信公众号、位置应用、云视讯、软件视频会议、老人关爱平台等');
-      }
-      if(select_val3=='grade2'){
-        $('#slc_tip1').html('2级难度项目：包含但不限于需要软硬集成、开发难度较高、需要现场调研、包含2-3个子系统的综合型项目&#10;硬件视频会议、视频监控、大数据、WLAN覆盖、呼叫中心、外呼平台、网格化、物联网、电子政务、MDM、原系统移动终端开发、旅游APP、人社系统、医保系统等');
-      }
-    });
+//    $("#slc_mode").change(function() {
+//      var select_val3 = $('#slc_mode').val();
+//      if(select_val3=='grade1'){
+//        $('#slc_tip1').html('1级难度项目：包含但不限于标准化程度较高、使用频次较高、简单、行业框架项目、成熟行业产品');
+//        $('#slc_tip2').html('OA（整套OA建设）、网站建设、一卡通、外勤通、党建、农业信息化、巡检、执法、食药监信息化、4G和拍、车载监控、微信公众号、位置应用、云视讯、软件视频会议、老人关爱平台等');
+//      }
+//      if(select_val3=='grade2'){
+//        $('#slc_tip1').html('2级难度项目：包含但不限于需要软硬集成、开发难度较高、需要现场调研、包含2-3个子系统的综合型项目&#10;硬件视频会议、视频监控、大数据、WLAN覆盖、呼叫中心、外呼平台、网格化、物联网、电子政务、MDM、原系统移动终端开发、旅游APP、人社系统、医保系统等');
+//      }
+//    });
 
   });
 </script>
