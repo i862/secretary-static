@@ -59,19 +59,22 @@
     font-size: 1.25em !important ;
     color: #fff;
     border-color: #2C72F5 !important ;
-    box-shadow:0 2px 5px 0 rgba(0,0,0,.2)
+    box-shadow:0 2px 5px 0 rgba(0,0,0,.2);
+    text-shadow:none;
 }
 .login_button:focus{
     background: #407FF5;
     font-size: 1.25em !important ;
     color: #fff;
     border-color: #2C72F5 !important ;
-    box-shadow:0 2px 5px 0 rgba(0,0,0,.2)
+    box-shadow:0 2px 5px 0 rgba(0,0,0,.2);
+    text-shadow:none;
 }
 
 .login_button:hover{
     color: #fff;
     background: #2C72F5;
+    text-shadow:none;
 }
 
 .login_button:disabled{
@@ -79,6 +82,7 @@
     background: #407FF5;
     border-color: #2C72F5;
     opacity: 1;
+    text-shadow:none;
 }
 
 
