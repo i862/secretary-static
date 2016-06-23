@@ -246,20 +246,7 @@
     margin-bottom: 0;
 }
 
-#slc_mode{
-
-}
-#slc_mode p{
+.popover_tip{
     display: none;
-    background-color: #0073b7;
-    position: absolute;
-    padding: 20px;
-    margin-top: 1em;
-    overflow: visible;
-    z-index: 100;
 }
-#slc_mode:hover p{
-     display:block;
- }
-
 

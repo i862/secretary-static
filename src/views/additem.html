@@ -115,7 +115,10 @@
                       <option value="grade2">2级难度</option>
                       <option value="grade3">3级难度</option>
                     </select>
-                    <p>ssssss</p>
+                    <div class="popover fade bottom in popover_tip">
+                      <div class="popover-title">题目</div>
+                      <div class="popover-content">内容</div>
+                    </div>
                   </div>
 
 
@@ -679,6 +682,13 @@
 //        $('#slc_tip1').html('2级难度项目：包含但不限于需要软硬集成、开发难度较高、需要现场调研、包含2-3个子系统的综合型项目&#10;硬件视频会议、视频监控、大数据、WLAN覆盖、呼叫中心、外呼平台、网格化、物联网、电子政务、MDM、原系统移动终端开发、旅游APP、人社系统、医保系统等');
 //      }
 //    });
+
+    $('#slc_mode').mouseover(function(){
+      $('.popover_tip').show();
+    });
+    $('#slc_mode').mouseout(function(){
+      $('.popover_tip').hide();
+    })
 
   });
 </script>
