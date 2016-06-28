@@ -117,8 +117,8 @@
                       <option value="grade3">3级难度</option>
                     </select>
                     <div class="tooltip fade bottom in tooltip_div">
-                      <p>ssss</p>
-                      <p>333</p>
+                      <p id="mode_intro1"></p>
+                      <p id="mode_intro2"></p>
                     </div>
                   </div>
                   <div class="col-sm-1">
@@ -721,11 +721,16 @@
 //    });
 
     $('#slc_mode').mouseover(function(){
-      $('.tooltip_div').show();
+      var select_val3 = $('#slc_mode').val();
+      if(select_val3=='grade1'){
+        $('#mode_intro1').text('1级难度项目：包含但不限于标准化程度较高、使用频次较高、简单、行业框架项目、成熟行业产品');
+        $('#mode_intro2').text('OA（整套OA建设）、网站建设、一卡通、外勤通、党建、农业信息化、巡检、执法、食药监信息化、4G和拍、车载监控、微信公众号、位置应用、云视讯、软件视频会议、老人关爱平台等');
+        $('.tooltip_div').show();
+      }
     });
     $('#slc_mode').mouseout(function(){
       $('.tooltip_div').hide();
-    })
+    });
 
   });
 </script>

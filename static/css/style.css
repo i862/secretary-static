@@ -248,6 +248,12 @@
 
 .tooltip_div{
     display: none;
+    background: #fff;
+    color:#727272;
+    opacity: 0.8;
+    border:1px solid #727272;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #727272;
 }
 .input_1_1{
     display: inline;
