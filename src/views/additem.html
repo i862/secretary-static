@@ -70,16 +70,7 @@
             <div id="instr" class="panel-collapse">
               <div class="panel-body">
                 <div class="row">
-                  <div class="col-sm-1">
-                    <label>所属地市</label>
-                  </div>
-                  <div class="col-sm-2">
-                    <select class="form-control">
-                      <option>济南</option>
-                      <option>青岛</option>
-                      <option>省集服</option>
-                    </select>
-                  </div>
+
                   <div class="col-sm-1">
                     <label>工单编号</label>
                   </div>
@@ -96,6 +87,16 @@
                 </div>
 
                 <div class="row row_item">
+                  <div class="col-sm-1">
+                    <label>所属地市</label>
+                  </div>
+                  <div class="col-sm-2">
+                    <select class="form-control">
+                      <option>济南</option>
+                      <option>青岛</option>
+                      <option>省集服</option>
+                    </select>
+                  </div>
                   <div class="col-sm-1">
                     <label>项目类型</label>
                   </div>
@@ -115,18 +116,54 @@
                       <option value="grade2">2级难度</option>
                       <option value="grade3">3级难度</option>
                     </select>
-                    <div class="popover fade bottom in popover_tip">
-                      <div class="popover-title">题目</div>
-                      <div class="popover-content">内容</div>
+                    <div class="tooltip fade bottom in tooltip_div">
+                      <p>ssss</p>
+                      <p>333</p>
                     </div>
+                  </div>
+                  <div class="col-sm-1">
+                    <label>项目金额</label>
+                  </div>
+                  <div class="col-sm-2">
+                    <input class="form-control" placeholder="单位：万元">
+                  </div>
+
+                </div>
+
+                <div class="row row_item">
+
+                  <div class="col-sm-1">
+                    <label>绑定手机</label>
+                  </div>
+                  <div class="col-sm-2">
+                    <input class="form-control">
+                  </div>
+
+                  <div class="col-sm-1">
+                    <label>宽带数</label>
+                  </div>
+                  <div class="col-sm-2">
+                    <input class="form-control input_1_2">
+                    <span>条</span>
+                    <input class="form-control input_1_1">
+                    <span>M</span>
+                  </div>
+
+                  <div class="col-sm-4">
+                    <label>三年信息化收益</label>
+                    <input class="form-control input_2" placeholder="单位：万元">
                   </div>
 
 
+                </div>
+
+
+                <div class="row row_item">
                   <div class="col-sm-1">
                     <label>项目简介</label>
                   </div>
-                  <div class="col-sm-4">
-                    <textarea class="form-control" row="2"></textarea>
+                  <div class="col-sm-8">
+                    <textarea class="form-control"></textarea>
                   </div>
                 </div>
 
@@ -684,10 +721,10 @@
 //    });
 
     $('#slc_mode').mouseover(function(){
-      $('.popover_tip').show();
+      $('.tooltip_div').show();
     });
     $('#slc_mode').mouseout(function(){
-      $('.popover_tip').hide();
+      $('.tooltip_div').hide();
     })
 
   });

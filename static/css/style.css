@@ -246,7 +246,19 @@
     margin-bottom: 0;
 }
 
-.popover_tip{
+.tooltip_div{
     display: none;
+}
+.input_1_1{
+    display: inline;
+    width: 40%;
+}
+.input_1_2{
+    display: inline;
+    width: 30%;
+}
+.input_2{
+    display: inline;
+    width: 40%;
 }
 
