@@ -215,6 +215,7 @@
     vertical-align:middle;
 }
 
+
 .wds_right{
     text-align: right;
     float: right;
@@ -248,6 +249,9 @@
 
 .tooltip_div{
     display: none;
+    position: absolute;
+    left:-80px;
+    width: 300%;
     background: #fff;
     color:#727272;
     opacity: 0.8;
@@ -267,4 +271,6 @@
     display: inline;
     width: 40%;
 }
+
+
 

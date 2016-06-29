@@ -110,8 +110,8 @@
                   <div class="col-sm-1">
                     <label>项目难度</label>
                   </div>
-                  <div class="col-sm-2" id="slc_mode">
-                    <select class="form-control">
+                  <div class="col-sm-2" >
+                    <select class="form-control" id="slc_mode">
                       <option value="grade1" selected>1级难度</option>
                       <option value="grade2">2级难度</option>
                       <option value="grade3">3级难度</option>
@@ -721,12 +721,23 @@
 //    });
 
     $('#slc_mode').mouseover(function(){
-      var select_val3 = $('#slc_mode').val();
-      if(select_val3=='grade1'){
+      if($('#slc_mode :selected').val()=='grade1'){
         $('#mode_intro1').text('1级难度项目：包含但不限于标准化程度较高、使用频次较高、简单、行业框架项目、成熟行业产品');
         $('#mode_intro2').text('OA（整套OA建设）、网站建设、一卡通、外勤通、党建、农业信息化、巡检、执法、食药监信息化、4G和拍、车载监控、微信公众号、位置应用、云视讯、软件视频会议、老人关爱平台等');
         $('.tooltip_div').show();
       }
+      if($('#slc_mode :selected').val()=='grade2'){
+        $('#mode_intro1').text('2级难度项目：包含但不限于需要软硬集成、开发难度较高、需要现场调研、包含2-3个子系统的综合型项目');
+        $('#mode_intro2').text('硬件视频会议、视频监控、大数据、WLAN覆盖、呼叫中心、外呼平台、网格化、物联网、电子政务、MDM、原系统移动终端开发、旅游APP、人社系统、医保系统等');
+        $('.tooltip_div').show();
+      }
+      if($('#slc_mode :selected').val()=='grade3'){
+        $('#mode_intro1').text('3级难度项目：包含但不限于“互联网+”、“智慧XX”、定制化程度极高、专业性极强、未涉猎的项目、包含3个以上子系统的综合型较强的项目、软硬集成较复杂的项目、对合作伙伴要求极高（如公司实力、开发实力、资质要求等）');
+        $('#mode_intro2').text('智慧城市、智慧园区、智慧校园、智慧医疗、智慧旅游、智慧交通、智慧水利、智能环保、智能制造、企事业单位定制化大型业务系统、系统间整合、行业专业软件等');
+        $('.tooltip_div').show();
+      }
+
+
     });
     $('#slc_mode').mouseout(function(){
       $('.tooltip_div').hide();
