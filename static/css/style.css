@@ -272,5 +272,11 @@
     width: 40%;
 }
 
+.mg_bottom{
+    margin-bottom: 2em;
+}
+
+::-webkit-inner-spin-button { visibility: hidden; }
+
 
 
