@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello Zui!</title>
+  <!-- zui -->
+  <link href="../../static/css/zui.min.css" rel="stylesheet">
+  <link href="../../static/css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <a class="navbar-brand navbar_red" href="#">Working-Days</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle nav_a navbar_red" data-toggle="dropdown">你好，<span>Amen</span><b
+              class="caret navbar_red"></b></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">修改密码</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container main_body">
+    <!-- 左侧菜单-->
+    <div class="col-sm-2 col_left">
+      <nav class="menu" data-toggle="menu">
+        <ul class="nav nav-primary">
+          <li class="nav-parent show no_border">
+            <a href="#">项目管理</a>
+            <ul class="nav">
+              <li><a href="#">新建项目</a></li>
+              <li><a href="#">工作量统计</a></li>
+              <li><a href="#">组织过程资产</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-parent show">
+            <a href="#">系统管理</a>
+            <ul class="nav">
+              <li><a href="#">人员管理</a></li>
+              <li><a href="#">新建规则</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- 内容-->
+    <div class="col-sm-10 main_content">
+      <table class="table datatable">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>规则名称</th>
+          <th>所属类型</th>
+          <th>二级类型</th>
+          <th>二级类型</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
+
+<script src="../../static/lib/jquery.1.11.0.min.js"></script>
+<!--zui js-->
+<script src="../../static/lib/zui.min.js"></script>
+</body>
+</html>

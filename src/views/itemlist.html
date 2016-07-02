@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello Zui!</title>
+  <!-- zui -->
+  <link href="../../static/css/zui.min.css" rel="stylesheet">
+  <link href="../../static/css/style.css" rel="stylesheet">
+  <link href="../../static/css/zui.datatable.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <a class="navbar-brand navbar_red" href="#">Working-Days</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle nav_a navbar_red" data-toggle="dropdown">你好，<span>Amen</span><b
+              class="caret navbar_red"></b></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">修改密码</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container main_body">
+    <!-- 左侧菜单-->
+    <div class="col-sm-2 col_left">
+      <nav class="menu" data-toggle="menu">
+        <ul class="nav nav-primary">
+          <li class="nav-parent show no_border">
+            <a href="#">项目管理</a>
+            <ul class="nav">
+              <li><a href="#">新建项目</a></li>
+              <li><a href="#">工作量统计</a></li>
+              <li><a href="#">组织过程资产</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-parent show">
+            <a href="#">系统管理</a>
+            <ul class="nav">
+              <li><a href="#">人员管理</a></li>
+              <li><a href="#">规则管理</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- 内容-->
+    <div class="col-sm-10 main_content">
+      <div class="row mg_bottom">
+        <div class="col-sm-8"></div>
+        <div class="col-sm-4">
+          <div class="input-group">
+            <div class="input-group-btn" id="type_search">
+              <button type="button" style="width: 90px;" class="btn btn-default dropdown-toggle" id="type_search_btn"  data-toggle="dropdown">
+                项目名称
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a>项目名称</a></li>
+                <li><a>工单编号</a></li>
+                <li><a>地市</a></li>
+                <li><a>负责人</a></li>
+
+              </ul>
+
+            </div>
+            <input class="form-control" type="text">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default"><i class="icon-search"></i></button>
+            </span>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+      <div class="datatable" id="table_itemlist" style="background-color: #fff;">
+        <!--<div class="datatable-head">-->
+          <!--<div class="datatable-head-span datatable-span fixed-left">-->
+            <!--<div class="datatable-wrapper">-->
+              <!--<table class="table table-datatable table-hover">-->
+                <!--<thead>-->
+                  <!--<tr>-->
+                    <!--<th style="width: 5%">#</th>-->
+                    <!--<th style="width: 15%">项目编号</th>-->
+                    <!--<th style="width: 37%">项目名称</th>-->
+                  <!--</tr>-->
+                <!--</thead>-->
+              <!--</table>-->
+            <!--</div>-->
+          <!--</div>-->
+
+            <!--<th class="flex-col" style="width: 7%">工作量</th>-->
+            <!--<th class="flex-col" style="width: 7%">派单人</th>-->
+            <!--<th style="width: 7%">更新日期</th>-->
+            <!--<th style="width: 10%">操作</th>-->
+          <!--<div></div>-->
+        <!--</div>-->
+        <!--<div>-->
+          <!--<tr>-->
+            <!--<td class="text-center" >1</td>-->
+            <!--<td  class="datatable-head-span datatable-span fixed-left" >解决方案（2016）153号</td>-->
+            <!--<td  class="datatable-head-span datatable-span fixed-left" >泰山区特种设备管理系统建设项目</td>-->
+            <!--<td  class="datatable-head-span datatable-span flexarea">83</td>-->
+            <!--<td class="datatable-head-span datatable-span flexarea">83</td>-->
+            <!--<td class="datatable-head-span datatable-span fixed-right">2016/12/22</td>-->
+            <!--<td class="datatable-head-span datatable-span fixed-right">-->
+              <!--<a data-toggle="tooltip" title="查看">-->
+                <!--<i class="icon icon-file"></i>-->
+              <!--</a>-->
+              <!--&nbsp-->
+              <!--<a data-toggle="tooltip" title="编辑">-->
+                <!--<i class="icon icon-edit"></i>-->
+              <!--</a>-->
+            <!--</td>-->
+          <!--</tr>-->
+        <!--</div>-->
+      </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<script src="../../static/lib/jquery.1.11.0.min.js"></script>
+<!--zui js-->
+<script src="../../static/lib/zui.min.js"></script>
+<script src="../../static/lib/zui.datatable.min.js"></script>
+
+<script>
+  $(function(){
+    $('#type_search a').click(function(){
+      $('#type_search_btn').html($(this).text()+'&nbsp<span class="caret"></span>');
+//      console.log($('#type_search_btn').html());
+    });
+
+    var edithtml = '<a data-toggle=\"tooltip\" title=\"查看\"> <i class=\"icon icon-file\"></i> </a> &nbsp <a data-toggle="tooltip" title="编辑"> <i class="icon icon-edit"></i> </a>';
+
+    $('#table_itemlist').datatable({
+      fixedLeftWidth:'45%',
+      fixedRightWidth:'25%',
+      data:{
+        cols:[
+          {width: 30, text: '#', type: 'number', flex: false, colClass: 'text-center'},
+          {width: 160, text: '项目编号', flex: false,  type: 'string'},
+          {width: 'auto', text: '项目名称', flex: false, type: 'string', colClass: ''},
+          {width: 50, text: '地市',flex: true, type: 'string',colClass: 'text-center'},
+          {width: 55,text: '工作量', type: 'string', flex: true, colClass: 'text-center flex-col'},
+
+          {width: 80,text: '支撑时间', type: 'date', flex: true, colClass: 'text-center flex-col'},
+          {width: 80,text: '派单时间', type: 'date', flex: true, colClass: 'text-center flex-col'},
+          {width: 80,text: '派单人', type: 'string', flex: true, colClass: 'text-center flex-col'},
+
+
+          {width: 50, text: '负责人',  flex: false, type: 'string', colClass: 'text-center'},
+          {width: 70, text: '更新时间', flex: false,  type: 'date', colClass: 'text-center'},
+          {width: 70, text: '操作', flex: false,  type: 'date', colClass: 'text-center'}
+        ],
+        rows:[
+          {checked: false, data: [1,'解决方案（2016）153号','泰山区特种设备管理系统建设项目','泰安','83','2016/12/22','2016/12/22', '牛永峰','李璐希','2016/12/22',edithtml]},
+          {checked: false, data: [2,'解决方案（2016）153号','泰山区特种设备管理系统建设项目管理系统建设项目','泰安','83','2016/12/22','2016/12/22', '牛永峰','李璐希','2016/12/22',edithtml]}
+        ]
+
+
+      }
+    });
+
+  });
+</script>
+</body>
+</html>
